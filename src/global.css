@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body{
+    font: 400 14px Roboto, sans-serif;
+    background: #e7ecec;;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1{
+    font-size: 30pt;
+}
+
+input, button, textarea {
+    font: 400 16px Roboto, sans-serif;
+}
+
+button{
+    cursor: pointer;
+}
+form input{
+    height: 40px;
+    color: #333;
+    border: 1px solid #646464;
+    border-radius: 8px;
+    padding: 0 20px;
+}
+.buttons{
+    background: #006eff;
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    margin: 10px;
+    padding: 5px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 30px;
+    transition: filter 0.2s;
+}
+.buttons:hover{
+    filter: brightness(90%);
+}
