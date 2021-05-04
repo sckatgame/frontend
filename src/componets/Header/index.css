@@ -1,0 +1,16 @@
+@media (max-width:600px) {
+    .Header{
+        flex-direction: column;
+    }
+}
+.Header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.Header h1{
+    color: #006eff;
+}
