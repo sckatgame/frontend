@@ -16,6 +16,16 @@ h1{
     font-size: 30pt;
 }
 
+label{
+    font-size: 18pt;
+    color: #5c5c5c;
+}
+
+h2{
+    font-size: 25pt;
+    color: #5c5c5c;
+}
+
 input, button, textarea {
     font: 400 16px Roboto, sans-serif;
 }
