@@ -5,8 +5,8 @@ export default function Header(){
         <div className="Header">
             <h1>Sckat Game</h1>
             <div>
-                <button className="buttons">Regras</button>
-                <button className="buttons">Jogar agora</button>
+                <button className="buttons" style={{width:90}}>Regras</button>
+                <button className="buttons" style={{width:110}}>Jogar agora</button>
             </div>
         </div>
     )
