@@ -5,26 +5,30 @@ import api from '../../services/api'
 export default function PassForgot(){
 
     const [email,setEmail] = useState('');
+    const [text,setText] = useState('Enviar senha');
     const [desable,setDesable] = useState(false);
 
     async function hanldeForgot(e){
         e.preventDefault();
 
+        setText('Aguarde...')
         setDesable(true);
 
         try{
             const response = await api.post('password',{email});
+            setText('Senha Enviada');
             alert(response.data.sucess);
 
         }catch(err){
             const {data} = err.response
             
-            if(!data.err){
+            if(!data.error){
                 alert('Formato de email inválido')
             }else{
-                alert(data.err)
+                alert(data.error)
             }
 
+            setText('Enviar senha')
             setDesable(false)
         }
 
@@ -45,7 +49,7 @@ export default function PassForgot(){
                 />
                 
                 <div className="buttons-actions">
-                    <button disabled={desable} className="buttons" style={{width:150}} type="submit">Enviar senha</button>
+                    <button disabled={desable} className="buttons" style={{width:150}} type="submit">{text}</button>
                 </div>
             </form>
         </section>
