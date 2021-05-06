@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Switch } from "react-router-dom";
 import PrivateRouter from "./componets/PrivateRouter";
 import PublicRoute from "./componets/PublicRoute";
 
@@ -12,7 +12,7 @@ export default function Routes(){
             <Switch>
                 <PublicRoute path="/" exact component={Logon}/>
                 <PrivateRouter topath="/" path="/profil" component={Profil}/>
-                <Route path="/:validate" component={Forgot}/>
+                <PublicRoute path="/:validate" component={Forgot}/>
             </Switch>
         </BrowserRouter>
     );
