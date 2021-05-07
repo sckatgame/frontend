@@ -55,6 +55,7 @@ export default function Logup(){
                 <input 
                     required
                     placeholder="Nome de Usuário"
+                    maxLength="14"
                     value={name}
                     onChange={e => setName(e.target.value)} 
                 />
