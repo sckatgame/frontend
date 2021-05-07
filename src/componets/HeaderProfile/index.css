@@ -1,0 +1,42 @@
+.image-icon img{
+    width: 85%;
+    height: 85%;
+}
+.image-icon{
+    margin-left: 10px;
+}
+.content-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.Profile-header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+}
+
+.Profile-info h2{
+    margin-left: 20px;
+    font-size: 16pt;
+    color: #46565c;
+}
+.btn-quit button{
+    width: 60px;
+    margin: 0;
+    background-color: #be1914;
+}
+.btn-content{
+    grid-area:btns ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn-actions{
+    display: flex;
+    margin-top: 10px;
+}
+.btn-content input{
+    width: 300px;
+}
