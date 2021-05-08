@@ -1,0 +1,53 @@
+.body ul{
+    display: flex;
+}
+
+.Acounts h3{
+    font-size: 16pt;
+    font-weight: 100;
+    color:#262a33;
+    margin: 20px;
+    text-align: center;
+}
+
+.list-conteiner{
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-gap: 5px;
+}
+
+.body ul{
+    list-style: none;
+}
+
+.body li{
+    font-size: 12pt;
+    margin: 10px;
+    color: #2d2e30;
+    padding: 15px;
+    width: 250px;
+    height: 160px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.acounts-info p{
+    margin-bottom: 10px;
+}
+.Infos{
+    margin: 10px;
+}
+
+.Infos h3{
+    margin-left: 10px;
+    font-size: 16pt;
+    font-weight: 100;
+    color: #141820;
+}
+
+.Infos p{
+    font-size: 12pt;
+    margin-top: 10px;
+    margin-left: 10px;
+}
