@@ -23,7 +23,7 @@ export default function Admin(){
 
         try{
 
-            const {data} = await api.post('user',{
+            const {data} = await api.post('users',{
                 email,
                 password:senha
             });
