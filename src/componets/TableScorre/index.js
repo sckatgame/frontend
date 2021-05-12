@@ -1,8 +1,8 @@
-export default function TableScorre({topFive}){
+export default function TableScorre({topFive,title}){
 
     return (
         <div className="table-item">
-            <h3>Top Sckat Players</h3>
+            <h3>{title}</h3>
             
             <table className="Content-Table">
                 <thead>

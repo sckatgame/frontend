@@ -3,13 +3,15 @@ import {useHistory} from 'react-router-dom'
 import LogUp from '../../assets/login.png'
 import './index.css'
 
-export default function HeaderProfile({name,scorre}){
+export default function HeaderProfile({name,scorre,client}){
 
     const history = useHistory();
 
     function handleQuit(){
+        client.disconnect();
         localStorage.clear()
         history.push('/');
+        window.location.reload();
     }
 
     return (
