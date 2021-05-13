@@ -15,7 +15,11 @@ export default function Header(){
                         history.push('/rules')
                     }
                 } >Regras</button>
-                <button className="buttons" style={{width:110}}>Jogar agora</button>
+                <button className="buttons" style={{width:110}} onClick={
+                    () =>{
+                        history.push('/game')
+                    }
+                }>Jogar agora</button>
             </div>
         </div>
     )
