@@ -1,0 +1,15 @@
+.awaiting{
+    display: flex;
+    margin-top: 70px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.awaiting h2{
+    font-size: 22pt;
+}
+.awaiting img{
+    margin-top: 50px;
+    height: 130px;
+    width: 130px;
+}
