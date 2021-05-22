@@ -1,0 +1,29 @@
+.Header-Info{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 350px;
+    color: rgb(70, 61, 61);
+}
+.informations{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.informations h3{
+    margin-top: 3px;
+}
+.icon{
+    height: 60px;
+    width: 60px;
+}
+.icon-button{
+    width:35%;
+    height:50%;
+    margin-right:8px;
+    filter:invert(100%);
+}
+.You{
+    padding: 0 10px;
+    justify-content: space-between;
+}
