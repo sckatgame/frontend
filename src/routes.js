@@ -19,7 +19,9 @@ export default function Routes(){
                 <PublicRoute path="/" exact component={Logon}/>
                 <PrivateRouter topath="/" path="/profil" component={Profil} client={client}/>
                 <PublicRoute path="/admin" component={Admin}/>
-                <Route path="/game" component={Game}/>
+                <Route path="/game" render={
+                    props => <Game {...props} client={client}/>
+                }/>
                 <PublicRoute path="/rules" component={Rules}/>
                 <PublicRoute path="/:validate" component={Forgot}/>
             </Switch>
