@@ -17,6 +17,7 @@ export default function Header(){
                 } >Regras</button>
                 <button className="buttons" style={{width:110}} onClick={
                     () =>{
+                        localStorage.setItem('playing','hey')
                         history.push('/game')
                     }
                 }>Jogar agora</button>
