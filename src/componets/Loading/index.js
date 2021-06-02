@@ -1,7 +1,18 @@
 import loading from '../../assets/loading.gif'
 import './index.css';
 
-export default function Loading(){
+export default function Loading({codigo}){
+
+    function renderCode(){
+        if(codigo){
+            return (
+                <h3>Código da Sala : {codigo}</h3>
+            );
+        }
+
+        return ;
+    }
+
     return(
         <div className="conteiner-loading">
             <div className="Header">
@@ -9,6 +20,7 @@ export default function Loading(){
             </div>
             <div className="awaiting">
                 <h2>Aguardando oponente...</h2>
+                {renderCode()}
                 <img alt="" src={loading}/>
             </div>
         </div>

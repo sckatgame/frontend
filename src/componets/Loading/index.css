@@ -8,6 +8,12 @@
 .awaiting h2{
     font-size: 22pt;
 }
+
+.awaiting h3{
+    color: #4d4b4b;
+    margin: 10px;
+}
+
 .awaiting img{
     margin-top: 50px;
     height: 130px;
