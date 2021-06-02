@@ -1,6 +1,7 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Switch } from "react-router-dom";
 import PrivateRouter from "./componets/PrivateRouter";
 import PublicRoute from "./componets/PublicRoute";
+import GameRouter from "./componets/GameRouter";
 import { io } from "socket.io-client";
 
 import Logon from './pages/Logon';
@@ -9,6 +10,7 @@ import Profil from "./pages/Profil";
 import Rules from "./pages/Rules";
 import Admin from "./pages/Admin";
 import Game from "./pages/Game";
+import PrivateGame from "./pages/PrivateGame";
 
 const client = io('http://192.168.3.8:4000',{transports:['websocket']});
 
@@ -19,9 +21,10 @@ export default function Routes(){
                 <PublicRoute path="/" exact component={Logon}/>
                 <PrivateRouter topath="/" path="/profil" component={Profil} client={client}/>
                 <PublicRoute path="/admin" component={Admin}/>
-                <Route path="/game" render={
-                    props => <Game {...props} client={client}/>
-                }/>
+                
+                <GameRouter path="/game" topath="/" component={Game} client={client}/>
+                <GameRouter path="/private-game" topath="/" component={PrivateGame} client={client}/>
+                
                 <PublicRoute path="/rules" component={Rules}/>
                 <PublicRoute path="/:validate" component={Forgot}/>
             </Switch>
