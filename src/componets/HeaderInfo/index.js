@@ -3,7 +3,7 @@ import icon2 from '../../assets/validate.png'
 
 import './index.css';
 
-export default function HeaderInfo({type,name,scorre,enable,count}){
+export default function HeaderInfo({type,name,scorre,enable,count,setx,setCount}){
 
     function render(){
         if(type === 'you'){
@@ -12,7 +12,14 @@ export default function HeaderInfo({type,name,scorre,enable,count}){
                     <div>
                         <button 
                             disabled={enable}
-                            className="buttons" 
+                            className="buttons"
+                            onClick={
+                                () =>{
+                                    setx(true)
+                                    setCount(15)
+                                    clearInterval(window.interval)
+                                }
+                            } 
                             style={{
                                 width:80,
                                 display:'flex',
@@ -20,7 +27,7 @@ export default function HeaderInfo({type,name,scorre,enable,count}){
                                 justifyContent:'center',
                                 backgroundColor: enable ? "#006eff" : "#0f9b45"
                             }}>
-                            -<img alt="" className="icon-button" src={icon2}/>{enable? 30 :count }s
+                            -<img alt="" className="icon-button" src={icon2}/>{enable? 15 :count }s
                         </button>
                     </div>
                     <div className="informations">
