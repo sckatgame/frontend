@@ -7,7 +7,7 @@ export default function SelectSquare(e,code,sclick,setSclick){
     let item = list_square[8-word_line[1]][words[word_line[0]]];
     
     if(!item || !isNaN(item)){
-        return ;
+        return false;
     }else{
         if(!sclick[e]){
             const data = {
@@ -24,4 +24,5 @@ export default function SelectSquare(e,code,sclick,setSclick){
             setSclick(data)
         }
     }
+    return true;
 }

@@ -6,6 +6,9 @@ export default function randomName(){
 
     name += hash1*hash2*hash3;
 
+    localStorage.setItem('scorre','Convidado');
+    localStorage.setItem('name',name);
+
     return {
         name,
         scorre:'Convidado'
