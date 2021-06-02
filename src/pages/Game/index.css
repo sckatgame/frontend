@@ -1,0 +1,17 @@
+.conteiner-game{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+.placar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    margin: 5px;
+}
+.chessboard{
+    margin: 10px;
+}
