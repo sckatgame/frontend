@@ -1,0 +1,62 @@
+@media (max-width:600px) {
+    .btn-content form input{
+        width: 200px;
+    }
+    .Tables{
+        flex-direction: column;
+    }
+}
+.Profile{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "header" "btns" "tables";
+    grid-template-rows: 15% 20% auto;
+}
+
+/*Table style*/
+.Content-Table{
+    border-collapse: collapse;
+    font-size: 14pt;
+    min-width: 300px;    
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0,0.15);
+
+}
+
+.Content-Table thead tr{
+    background-color: #3789f5;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.Content-Table th, .Content-Table td{
+    padding: 10px 15px;
+}
+
+.Content-Table tbody tr{
+    border-bottom: 1px solid #969696;
+}
+
+.Content-Table tbody tr:nth-of-type(even){
+    background-color: #f7f7f7;
+}
+
+/*Tables Styles*/
+.Tables{
+    grid-area: tables;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.table-item{
+    margin-top: 20px;
+}
+.table-item h3{
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 14pt;
+    color:#46565c;
+}
