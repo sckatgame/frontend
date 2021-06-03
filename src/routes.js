@@ -12,7 +12,7 @@ import Admin from "./pages/Admin";
 import Game from "./pages/Game";
 import PrivateGame from "./pages/PrivateGame";
 
-const client = io('http://192.168.3.8:4000',{transports:['websocket']});
+const client = io('https://backend-sckatgame.herokuapp.com/',{transports:['websocket']});
 
 export default function Routes(){
     return(

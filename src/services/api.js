@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL:'http://192.168.3.8:4000/',
+    baseURL:'https://backend-sckatgame.herokuapp.com/',
 });
 
 export default api;
