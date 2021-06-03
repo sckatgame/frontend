@@ -27,6 +27,8 @@ export default function HeaderProfile({name,scorre,client}){
                 </div>
             </div>
             
+            <h1>Sckat Game</h1>
+
             <div className="btn-quit">
                 <button className="buttons" onClick={handleQuit}>Sair</button>
             </div>

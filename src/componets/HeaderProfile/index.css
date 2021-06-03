@@ -1,3 +1,9 @@
+@media (max-width:600px) {
+    .content-info h1{
+        display: none;
+    }   
+}
+
 .image-icon img{
     width: 85%;
     height: 85%;
@@ -10,6 +16,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+.content-info h1{
+    width: 100%;
+    margin-left: 15%;
 }
 .Profile-header{
     grid-area: header;
