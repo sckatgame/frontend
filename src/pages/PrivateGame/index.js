@@ -37,6 +37,8 @@ export default function PrivateGame({client}){
 
     const [coderoom,setCodeRoom] = useState('');
 
+    const[win,setWin] = useState('');
+
     const history = useHistory();
 
     function clear(){
@@ -67,7 +69,6 @@ export default function PrivateGame({client}){
             client.on('privateData', res =>{
                 const players = res.players;
 
-                console.log(res);
                 data.particepe = res.count;
                 
                 if(res.count === 2){
@@ -131,8 +132,9 @@ export default function PrivateGame({client}){
                         let newOpt = opt+1
                         setOpt(newOpt)
                     }
+                    
+                    setWin(res.name)
                     setRound(res.round)
-                    console.log(res)
 
                     if(res.round === 2){
                         setCode(res.code);
@@ -285,6 +287,23 @@ export default function PrivateGame({client}){
 
     function render(){
         
+        function rules(){
+
+            if(round != 1 && round != 2){
+                let text = rule === 1 ? 
+                'Retirar a(s) última(s) peça(s)' : 
+                'Deixar a última peça no tabuleiro'
+
+                return text
+            }else{
+                let text2 = round == 1 ? 
+                'Retirar a(s) última(s) peça(s)' : 
+                'Deixar a última peça no tabuleiro'
+                
+                return text2
+            }
+        }
+
         if(x){
             if(Obj.length === 0){
                 client.emit('over');
@@ -305,9 +324,9 @@ export default function PrivateGame({client}){
                         player2={name2}
                         rule={text_rule}
                         round={round}
-                        you={you}
-                        opt={opt}
                         con={count2}
+                        win={win}
+                        you={name}
                     />
             }
 
@@ -321,9 +340,9 @@ export default function PrivateGame({client}){
                     player2={name2}
                     rule={text_rule}
                     round={round}
-                    you={you}
-                    opt={opt}
                     con={count2}
+                    win={win}
+                    you={name}
                 />
             }
 
@@ -331,6 +350,7 @@ export default function PrivateGame({client}){
                 <div className="conteiner-game">
                     
                     <h2>Round {round}</h2>
+                    <h3>Objetivo: {rules()}</h3>
                     
                     <div className="placar">
                         <h3>Você: {you}</h3>
@@ -398,6 +418,8 @@ export default function PrivateGame({client}){
                         setx={setx}
                         setCount={setCount}
                     />
+                    <br/>
+                    <p># Clique no botão para remover as peças</p>
                 </div>
             );
         }
