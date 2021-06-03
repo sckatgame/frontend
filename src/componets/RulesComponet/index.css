@@ -27,6 +27,11 @@
     align-items: center;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+.conteiner-placa img{
+    width: 40%;
+    height: 100%;
 }
 .conteiner-info{
     display: flex;
