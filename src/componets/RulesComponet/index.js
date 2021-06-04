@@ -1,5 +1,5 @@
 import winner from '../../assets/win.png'
-import loser from '../../assets/lose.webp'
+import loser from '../../assets/lose.png'
 
 import './index.css'
 
