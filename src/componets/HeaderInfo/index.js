@@ -16,7 +16,7 @@ export default function HeaderInfo({type,name,scorre,enable,count,setx,setCount}
                             onClick={
                                 () =>{
                                     setx(true)
-                                    setCount(15)
+                                    setCount(20)
                                     clearInterval(window.interval)
                                 }
                             } 
@@ -27,7 +27,7 @@ export default function HeaderInfo({type,name,scorre,enable,count,setx,setCount}
                                 justifyContent:'center',
                                 backgroundColor: enable ? "#006eff" : "#0f9b45"
                             }}>
-                            -<img alt="" className="icon-button" src={icon2}/>{enable? 15 :count }s
+                            -<img alt="" className="icon-button" src={icon2}/>{enable? 20 :count }s
                         </button>
                     </div>
                     <div className="informations">

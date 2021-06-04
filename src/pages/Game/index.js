@@ -31,8 +31,8 @@ export default function Game({client}){
     const [enable,setEnable] = useState(false);
     const [x,setx] = useState(false);
     
-    const [count,setCount] = useState(15);
-    const [count2,setCount2] = useState(5);
+    const [count,setCount] = useState(20);
+    const [count2,setCount2] = useState(10);
     
     const [Obj,setObj] = useState([]);
     const [sclick,setSclick] = useState({});
@@ -200,12 +200,12 @@ export default function Game({client}){
 
                 if(validate){
 
-                    let newCount = 15
+                    let newCount = 20
 
                     window.interval = setInterval(() => {
                         
                         if(newCount === 0){
-                            newCount = 15;
+                            newCount = 20;
                             setx(true)
                             setCount(newCount)
                             clearInterval(window.interval);
@@ -249,20 +249,20 @@ export default function Game({client}){
     )
 
     function init(vez,name,round,rest){
-        let c = 5;
+        let c = 10;
 
         let interval = setInterval(() => {
             if(c === 0){
                 clearInterval(interval)
                 rest ? setRound(`${round} - ${rest}`) : setRound(`${round}`)
-                setCount2(5)
+                setCount2(10)
                 if(vez === name){
-                    let newCount = 15
+                    let newCount = 20
                     
                     window.interval = setInterval(() => {
                         
                         if(newCount === 0){
-                            newCount = 15;
+                            newCount = 20;
                             setx(true)
                             setCount(newCount)
                             clearInterval(window.interval);
