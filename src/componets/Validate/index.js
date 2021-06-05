@@ -61,6 +61,9 @@ export default function Validate({email}){
                 <div className="buttons-actions">
                     <button disabled={desable} className="buttons" style={{width:150}} type="submit">{text}</button>
                 </div>
+                <br/>
+                <br/>
+                <p># Verifique sua caixa de spam,<br/> caso não tenha recebido ainda</p>
             </form>        
         </section>
     );

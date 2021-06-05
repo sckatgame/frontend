@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
-
-
+@media (max-width:600px) {
+    .video{
+        width:300px;
+        height:200px; 
+    }
+}
 .text-body{
     margin: 20px;
     font-family: 'Itim', cursive;

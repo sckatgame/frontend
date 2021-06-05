@@ -33,6 +33,7 @@ export default function Rules(){
                     }}>
                     <h2 style={{marginBottom:10}}>Regras de Jogo</h2>
                     <iframe
+                        className="video"
                         style={{marginBottom:10}}
                         width="560" 
                         height="315" 
