@@ -21,6 +21,29 @@ export default function Rules(){
                 </div>
             </div>
             <div className="text-body">
+
+                <div
+                    style={{
+                        width:'100%',
+                        margin:5,
+                        display:'flex',
+                        flexDirection:'column',
+                        justifyContent:'center',
+                        alignItems:'center'
+                    }}>
+                    <h2 style={{marginBottom:10}}>Regras de Jogo</h2>
+                    <iframe
+                        style={{marginBottom:10}}
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/5NZogT8y6bI" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                    />
+                </div> 
+
                 <p>Cada partida é composta por dois turnos com objetivos diferentes e mais um turno adcional em caso de empate.</p>
                 <p>No primeiro turno um tabuleiro aleatório é formado e o mesmo é repetido no turno 2, caso haja necessidade de um turno de desempate um novo tabuleiro aleatório será gerado.</p>
                 <br></br>
