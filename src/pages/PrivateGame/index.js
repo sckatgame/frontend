@@ -354,7 +354,7 @@ export default function PrivateGame({client}){
                     
                     <div className="placar">
                         <h3>Você: {you}</h3>
-                        <h3>Oponete: {opt}</h3>
+                        <h3>Oponente: {opt}</h3>
                     </div>
                     
                     <HeaderInfo 
