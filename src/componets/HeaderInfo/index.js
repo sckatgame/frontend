@@ -3,7 +3,7 @@ import icon2 from '../../assets/validate.png'
 
 import './index.css';
 
-export default function HeaderInfo({type,name,scorre,enable,count,setx,setCount}){
+export default function HeaderInfo({type,name,scorre,enable,count,setx,setCount,Obj}){
 
     function render(){
         if(type === 'you'){
@@ -15,9 +15,11 @@ export default function HeaderInfo({type,name,scorre,enable,count,setx,setCount}
                             className="buttons"
                             onClick={
                                 () =>{
-                                    setx(true)
-                                    setCount(20)
-                                    clearInterval(window.interval)
+                                    if(Obj.length !== 0){
+                                        setx(true)
+                                        setCount(20)
+                                        clearInterval(window.interval)
+                                    }
                                 }
                             } 
                             style={{

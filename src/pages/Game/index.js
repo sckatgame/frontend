@@ -414,6 +414,7 @@ export default function Game({client}){
                         count={count}
                         setx={setx}
                         setCount={setCount}
+                        Obj={Obj}
                     />
                     <br/>
                     <p># Clique no botão para remover as peças</p>
